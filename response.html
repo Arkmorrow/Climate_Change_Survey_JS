@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Climate Change response</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/style_ans.css" />
+	<link rel="stylesheet" href="css/survey_ans.css" />
+</head>
+<body>
+	<header>
+		<h1>Climate Change Survey Response</h1>
+	</header>
+	<nav>
+		<ul>
+			<li class="selected"><a href="homepage.html">Home</a></li>
+		</ul>
+	</nav>
+	
+	<div class="imageGreen">
+    	<img src="images/3.png" width = "960px" height = "340px">
+	</div>
+	<div id="content">
+		<article class="voice">
+			<header>
+				<h2>Have Your Say!</h2>
+			</header>
+			
+			<!-- SURVEY -->
+			<div class="survey">
+				<form id="envelope" onload="return validate()" name="myForm">
+					<!-- General information about the participant -->
+					<fieldset class="form-inner">	
+						<legend>General information about the participant</legend>
+						<label for="age" class="question">Age:</label>
+						<input type="text" class="input" name="age"  />	
+						
+						<label for="gender" class="question">Gender:</label>
+						<input type="text" class="input" name="gender"  />
+						
+						
+						<label for="suburb" class="question">Suburb:</label>
+						<input type="text" class="input" name="suburb"  />
+							
+						<label for="state" class="question">State:</label>
+						<input type="text" class="input" name="state"  />
+						
+						<label for="country" class="question">Country:</label>
+						<input type="text" class="input" name="country" />
+						
+					</fieldset>
+					
+					<!-- Awareness of Climate Change -->
+					<fieldset class="form-inner">
+						
+						<legend>Awareness of Climate Change</legend>
+							
+						<label for="awareness_air_pollution" class="question">1.In your view, has air pollution ever affected your health? </label><!-- //The questions have been adapted from Section 1 Question 2 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+							<input type="text" class="input" name="q1" />
+						</ol>
+						
+						
+						<label for="where" class="question">2.Where have you heard about climate change?</label><!-- //The questions have been adapted from Section 2 Question 11 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+						    <div id="q2"></div>
+						</ol>
+					</fieldset>
+					
+					<!-- Reasons -->
+					<fieldset class="form-inner">
+						<legend>Knowledge about Climate Change</legend>
+						
+						<label for="what" class="question">3.What climate change-related pressures do you think will affect ? (you can choose more than one)</label>
+						<ol>
+							<div id="q3"></div>
+						</ol>
+						
+					</fieldset>
+					
+					<!-- Attitudes -->
+					<fieldset class="form-inner">
+					
+						<legend>Attitudes to Climate Change</legend>
+						
+						<label for="how" class="question">4.How important is the issue of climate change to you personally ?</label><!-- //The questions have been adapted from Section 2 Question 13 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+							<input type="text" class="input" name="q4" />
+						</ol>
+						
+						<label for="who" class="question">5.Who do you think should have the main responsibility for tackling climate change? </label><!-- //The questions have been adapted from Section 2 Question 23 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+							<div id="q5"></div>
+						</ol>
+						
+						<label for="to_what" class="question">6.To what degree do you agree with a climate change plan?</label>
+						<ol>
+							<input type="text" class="input" name="q6" />
+						</ol>
+						
+					</fieldset>
+					<!-- Attitudes -->
+					<fieldset class="form-inner">
+					
+						<legend>Opinion on how to reduce the impacts of Climate Change</legend>
+						
+						<label for="are_aware_put" class="question">7.Are you aware of any plans that have been put in place to reduce the effects of climate change? (you can choose more than one)</label>
+						<ol>
+							<div id="q7"></div>
+						</ol>
+						
+						<label for="are_aware_aimed" class="question">8.Are you aware of any plans aimed at adapting to the effects of climate change? (you can choose more than one)</label>
+						<ol>
+							<div id="q8"></div>
+						</ol>
+						
+						<label for="what_approach" class="question">9.What approach would you prefer to see adopted in regard to climate change?</label>
+						<ol>
+							<input type="text" class="input" name="q9" />
+						</ol>
+						
+						<label for="how_well" class="question">10.How well informed do you believe you are on the effects of climate change?</label>
+						<ol>
+							<input type="text" class="input" name="q10" />
+						</ol>
+						<input type="re-submit" class="button" value="Re-Submit" onclick=" return resubmit()"/>
+					</fieldset>
+					
+				</form>
+			</div>
+			<!-- end SURVEY -->
+		</article>
+	</div>
+
+	<footer>
+		<p>Xiangwen Zheng</p>
+	</footer>
+	<script src="js/response.js"></script>
+</body>
+</html>

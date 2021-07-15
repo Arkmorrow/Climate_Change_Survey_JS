@@ -1,0 +1,106 @@
+fieldset
+{
+    margin: 0px 10px;
+    padding: 10px 30px;
+    width: 615px;
+}
+
+input.input
+{
+    font: 15px Tahamo; 
+    padding:0 5px;
+    margin: 2px 0 2px 20px;
+    border: 1px solid #B9BDC1; 
+    width: 300px; 
+    color: #797979;
+    
+    -moz-box-shadow: 0 2px 4px #BBB inset;
+    -webkit-box-shadow: 0 2px 4px #BBB inset;
+    box-shadow: 0 2px 4px #BBB inset;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;    
+}
+
+input.inputSmall
+{
+    font: 15px Arial; 
+    padding:0 5px;
+    margin: 0 20px 20px;
+    border: 1px solid #b9bdc1; 
+    width: 60px; 
+    color: #797979;
+    float: left;
+	
+    -moz-box-shadow: 0 2px 4px #bbb inset;
+    -webkit-box-shadow: 0 2px 4px #bbb inset;
+    box-shadow: 0 2px 4px #bbb inset;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;    
+}
+
+input.input:focus, input.inputSmall:focus
+{
+    background-color: #E7E8E7;
+    outline: 0;
+}
+
+input.button
+{
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 7px 15px;
+    cursor: pointer;   
+    color: #fff;
+    font: bold 13px Tahoma, Verdana, Arial;
+    text-transform: uppercase;
+    border: 0;  
+   
+    background-color: #3b5998;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    text-shadow: 0 1px 0 #0073D8;  
+    -moz-box-shadow: 0 1px 0 #0029D8, 0 3px 0 #1D00D8;
+    -webkit-box-shadow: 0 1px 0 #0029D8, 0 3px 0 #1D00D8;
+    box-shadow: 0 1px 0 #0029D8, 0 3px 0 #1D00D8;
+}
+
+input.button:hover
+{
+    background-color: #dfe3ee;
+    background-image: -moz-linear-gradient(#1D00D8, #0029D8);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1D00D8), to(#0029D8));      
+    background-image: -webkit-linear-gradient(#1D00D8, #0029D8);     
+}
+
+legend {
+	color: #8b9dc3;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+ol, ol li {
+	clear: both;
+	
+	padding: 5px 30px;
+}
+
+label.question
+{
+	clear: both;
+	display: block;
+    float: left;
+	font: bold 15px Tahoma; 
+    text-shadow: 0 1px 0 #FFF;
+	margin: 3px 0;
+}
+
+
+

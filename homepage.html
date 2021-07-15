@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Climate Change</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/style_ans.css" />
+	<link rel="stylesheet" href="css/survey_ans.css" />
+	<script src="js/survey.js"></script>
+	
+</head>
+<body>
+	<header>
+		<h1>Climate Change Survey</h1>
+	</header>
+	<nav>
+		<ul>
+			<li ><a href="homepage.html">Home</a></li>
+		</ul>
+	</nav>
+	
+	<div class="imageGreen">
+    	<img src="images/3.png" width = "960px" height = "340px">
+	</div>
+	<div id="content">
+		<article class="voice">
+			<header>
+				<h2>Have Your Say!</h2>
+			</header>
+			
+			<!-- SURVEY -->
+			<div class="survey">
+				<form  action="response.html" onload="validate()" name="myForm">
+					<!-- General information about the participant -->
+					<fieldset class="form-inner">	
+						<legend>General information about the participant</legend>
+						<label for="age" class="question">Age:</label>
+						<input type="number" min="0" class="inputSmall" name="age"  required="" />	
+						
+						<label for="gender" class="question">Gender:</label>
+						<ol>
+							<li>
+								<input type="radio"   value="Female" name="gender" onclick="gender_function(this.value)" required/>
+								<label class="gender" for="female">Female</label>
+							</li>
+							<li>
+								<input type="radio"   value="Male" name="gender" onclick="gender_function(this.value)" required/>
+								<label class="gender" for="male">Male</label>
+							</li>
+						</ol>
+						
+						
+						<label for="suburb" class="question">Suburb:</label>
+						<input type="text" class="input" name="suburb" required="" />
+							
+						<label for="state" class="question">State:</label>
+						<input type="text" class="input" name="state" required="" />
+						
+						<label for="country" class="question">Country:</label>
+						<input type="text" class="input" name="country" required="" />
+						
+					</fieldset>
+					
+					<!-- Awareness of Climate Change -->
+					<fieldset class="form-inner">
+						
+						<legend>Awareness of Climate Change</legend>
+							
+						<label for="awareness_air_pollution" class="question">1.In your view, has air pollution ever affected your health? </label><!-- //The questions have been adapted from Section 1 Question 2 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+							<li>
+								<input type="radio" value="yes" name="awareness_air_pollution" onclick="q1_function(this.value)" required/>
+								<label class="usage" for="yes">Yes</label>
+							</li>
+							<li>
+								<input type="radio" value="no" name="awareness_air_pollution" onclick="q1_function(this.value)" required/>
+								<label class="usage" for="no">No</label>
+							</li>
+							<li>
+								<input type="radio" value="don't_know" name="awareness_air_pollution" onclick="q1_function(this.value)" required>
+								<label class="usage" for="don't_know">Don't know</label>
+							</li>
+						</ol>
+						
+						<label for="where" class="question">2.Where have you heard about climate change? (you can choose more than one)</label><!-- //The questions have been adapted from Section 2 Question 11 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+							<li>
+								<input type="checkbox" id="q2_a1" name="where" value="Television"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a1">Television</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a2" name="where"  value="Radio"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a2">Radio</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a3" name="where"  value="Newspaper"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a3">Newspaper</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a4" name="where"  value="Internet"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a4">Internet</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a5"  name="where" value="Specialist publications/academic journals"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a5">Specialist publications/academic journals</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a6" name="where" value="Environmental groups (e.g. Worldwide Fund for Nature)"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a6">Environmental groups (e.g. Worldwide Fund for Nature)</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a7" name="where" value="School/ college/ university"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a7">School/ college/ university</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a8" name="where" value="Government agencies/ information"  onclick="q2_function(this.value)"/>
+								<label class="where" for="q2_a8">Government agencies/ information</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q2_a9" name="where" value="Public libraries"  onclick="q2_function(this.value)">
+								<label class="whyere" for="q2_a9">Public libraries</label>
+							</li>
+						</ol>
+					</fieldset>
+					
+					<!-- Reasons -->
+					<fieldset class="form-inner">
+						<legend>Knowledge about Climate Change</legend>
+						
+						<label for="what" class="question">3.What climate change-related pressures do you think will affect ? (you can choose more than one)</label>
+						<ol>
+							<li>
+								<input type="checkbox" id="q3_a1" name="what" value="Sea level rises" onclick="q3_function(this.value)"/>
+								<label class="what" for="q3_a1">Sea level rises</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q3_a2" name="what" value="Surface flooding" onclick="q3_function(this.value)"/>
+								<label class="what" for="q3_a2">Surface flooding</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q3_a3" name="what" value="Changes to rainfall patterns" onclick="q3_function(this.value)"/>
+								<label class="what" for="q3_a3">Changes to rainfall patterns</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q3_a4" name="what" value="Decreased access to freshwater" onclick="q3_function(this.value)"/>
+								<label class="what" for="q3_a4">Decreased access to freshwater</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q3_a5" name="what" value="Increased pollution in the water and air" onclick="q3_function(this.value)"/>
+								<label class="what" for="q3_a5">Increased pollution in the water and air</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q3_a6" name="what" value="More frequent extreme weather" onclick="q3_function(this.value)"/>
+								<label class="what" for="q3_a6">More frequent extreme weather</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q3_a7" name="what" value="Adverse impact on human health" onclick="q3_function(this.value)"/>
+								<label class="what" for="q3_a7">Adverse impact on human health</label>
+							</li>
+						</ol>
+						
+					</fieldset>
+					
+					<!-- Attitudes -->
+					<fieldset class="form-inner">
+					
+						<legend>Attitudes to Climate Change</legend>
+						
+						<label for="how" class="question">4.How important is the issue of climate change to you personally ?</label><!-- //The questions have been adapted from Section 2 Question 13 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+							<li>
+								<input type="radio" class="q4_a1" name="how"  value="Very important" onclick="q4_function(this.value)" required/>
+								<label class="how" for="q4_a1">Very important</label>
+							</li>
+							<li>
+								<input type="radio" class="q4_a2" name="how" value="Quite important" onclick="q4_function(this.value)" required/>
+								<label class="how" for="q4_a2">Quite important</label>
+							</li>
+							<li>
+								<input type="radio" class="q4_a3" name="how" value="Not very important" onclick="q4_function(this.value)" required/>
+								<label class="how" for="q4_a3">Not very important</label>
+							</li>
+							<li>
+								<input type="radio" class="q4_a4" name="how" value="Not at all important" onclick="q4_function(this.value)" required/>
+								<label class="how" for="q4_a4">Not at all important</label>
+							</li>
+						</ol>
+						
+						<label for="who" class="question">5.Who do you think should have the main responsibility for tackling climate change? (you can choose more than one)</label><!-- //The questions have been adapted from Section 2 Question 23 by University of Bath Lorraine Whitmarsh  -->
+						<ol>
+							<li>
+								<input type="checkbox" id="q5_a1" name="who" value="International organisations (e.g. the UN)" onclick="q5_function(this.value)" />
+								<label class="who" for="q5_a1"> International organisations (e.g. the UN) </label>
+							</li>
+							<li>
+								<input type="checkbox" id="q5_a2" name="who" value="The national government" onclick="q5_function(this.value)" />
+								<label class="who" for="q5_a2"> The national government </label>
+							</li>
+							<li>
+								<input type="checkbox" id="q5_a3" name="who" value="Local government" onclick="q5_function(this.value)"/>
+								<label class="who" for="q5_a3"> Local government</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q5_a4" name="who" value="Business and industry" onclick="q5_function(this.value)"/>
+								<label class="who" for="q5_a4"> Business and industry </label>
+							</li>
+							<li>
+								<input type="checkbox" id="q5_a5" name="who" value="Individuals" onclick="q5_function(this.value)"/>
+								<label class="who" for="q5_a5">Individuals</label>
+							</li>
+						</ol>
+						
+						<label for="to_what" class="question">6.To what degree do you agree with a climate change plan?</label>
+						<ol>
+							<li>
+								<input type="radio" class="q6_a1" name="to_what"  value="Strongly Agree" onclick="q6_function(this.value)" required />
+								<label class="to_what" for="q6_a1">Strongly Agree </label>
+							</li>
+							<li>
+								<input type="radio" class="q6_a2" name="to_what" value="Somewhat Agree" onclick="q6_function(this.value)" required/>
+								<label class="to_what" for="q6_a2">Somewhat Agree </label>
+							</li>
+							<li>
+								<input type="radio" class="q6_a3" name="to_what" value="Neutral" onclick="q6_function(this.value)" required/>
+								<label class="to_what" for="q6_a3">Neutral</label>
+							</li>
+							<li>
+								<input type="radio" class="q6_a4" name="to_what" value="Somewhat Disagree" onclick="q6_function(this.value)" required/>
+								<label class="to_what" for="q6_a4">Somewhat Disagree</label>
+							</li>
+							<li>
+								<input type="radio" class="q6_a5" name="to_what" value="Strongly Disagree" onclick="q6_function(this.value)" required/>
+								<label class="to_what" for="q6_a5">Strongly Disagree</label>
+							</li>
+						</ol>
+						
+					</fieldset>
+					<!-- Attitudes -->
+					<fieldset class="form-inner">
+					
+						<legend>Opinion on how to reduce the impacts of Climate Change</legend>
+						
+						<label for="are_aware_put" class="question">7.Are you aware of any plans that have been put in place to reduce the effects of climate change? (you can choose more than one)</label>
+						<ol>
+							<li>
+								<input type="checkbox" id="q7_a1" name="are_aware_put" value="Reducing energy demand" onclick="q7_function(this.value)"/>
+								<label class="are_aware_put" for="q7_a1">Reducing energy demand</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q7_a2" name="are_aware_put" value="Using renewable energy sources e.g. solar" onclick="q7_function(this.value)"/>
+								<label class="are_aware_put" for="q7_a2">Using renewable energy sources e.g. solar</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q7_a3" name="are_aware_put" value="Increased public transport" onclick="q7_function(this.value)"/>
+								<label class="are_aware_put" for="q7_a3">Increased public transport</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q7_a4" name="are_aware_put" value="Increased access to sustainable vehicles e.g. electric cars" onclick="q7_function(this.value)"/>
+								<label class="are_aware_put" for="q7_a4">Increased access to sustainable vehicles e.g. electric cars</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q7_a5" name="are_aware_put" value="Recycling" onclick="q7_function(this.value)"/>
+								<label class="are_aware_put" for="q7_a5">Recycling</label>
+							</li>
+						</ol>
+						
+						<label for="are_aware_aimed" class="question">8.Are you aware of any plans aimed at adapting to the effects of climate change? (you can choose more than one)</label>
+						<ol>
+							<li>
+								<input type="checkbox" id="q8_a1" name="are_aware_aimed" value="Health and rescue capability" onclick="q8_function(this.value)"/>
+								<label class="are_aware_aimed" for="q8_a1">Health and rescue capability</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q8_a2" name="are_aware_aimed" value="Land use and planning" onclick="q8_function(this.value)"/>
+								<label class="are_aware_aimed" for="q8_a2">Land use and planning</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q8_a3" name="are_aware_aimed" value="Natural environment" onclick="q8_function(this.value)"/>
+								<label class="are_aware_aimed" for="q8_a3">Natural environment</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q8_a4" name="are_aware_aimed" value="Bioeconomy" onclick="q8_function(this.value)"/>
+								<label class="are_aware_aimed" for="q8_a4">Bioeconomy</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q8_a5" name="are_aware_aimed" value="Energy and security of supply" onclick="q8_function(this.value)"/>
+								<label class="are_aware_aimed" for="q8_a5">Energy and security of supply</label>
+							</li>
+							<li>
+								<input type="checkbox" id="q8_a6" name="are_aware_aimed" value="Society, awareness and cooperation" onclick="q8_function(this.value)"/>
+								<label class="are_aware_aimed" for="q8_a6">Society, awareness and cooperation</label>
+							</li>
+						</ol>
+						
+						<label for="what_approach" class="question">9.What approach would you prefer to see adopted in regard to climate change?</label>
+						<ol>
+							<select name="what_approach" >
+							  <option value="Increased forestation and plnting trees">Increased forestation and plnting trees</option>
+							  <option value="Reducing carbon emission through behavioural change">Reducing carbon emission through behavioural change</option>
+							  
+						</select>
+						</ol>
+						
+						<label for="how_well" class="question">10.How well informed do you believe you are on the effects of climate change?</label>
+						<ol>
+							<li>
+								<input type="radio" class="q10_a1" name="how_well" value="Very" onclick="q10_function(this.value)" required/>
+								<label class="how_well" for="q10_a1">Very</label>
+							</li>
+							<li>
+								<input type="radio" class="q10_a2" name="how_well" value="Moderately" onclick="q10_function(this.value)" required/>
+								<label class="how_well" for="q10_a2">Moderately</label>
+							</li>
+							<li>
+								<input type="radio" class="q10_a3" name="how_well" value="Somewhat" onclick="q10_function(this.value)" required/>
+								<label class="how_well" for="q10_a3">Somewhat</label>
+							</li>
+							<li>
+								<input type="radio" class="q10_a4" name="how_well" value="A little" onclick="q10_function(this.value)" required/>
+								<label class="how_well" for="q10_a4">A little </label>
+							</li>
+							<li>
+								<input type="radio" class="q10_a5" name="how_well" value="Not at all" onclick="q10_function(this.value)" required/>
+								<label class="how_well" for="q10_a5">Not at all </label>
+							</li>
+						</ol>
+						<input  type="submit" class="button" value="Submit Me" onclick="validate()" /><input type="reset" class="button" value="Reset" />
+					</fieldset>
+					
+				</form>
+			</div>
+			<!-- end SURVEY -->
+		</article>
+	</div>
+
+	<footer>
+		<p>Xiangwen Zheng</p>
+	</footer>
+</body>
+</html>
